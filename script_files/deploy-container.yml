@@ -1,0 +1,17 @@
+---
+
+- hosts: n1
+  tasks:
+
+  - name: stop cont
+    command: docker stop tomcat
+    ignore_errors: yes
+  - name: rm container and remove images
+    command: docker rm tomcat
+    ignore_errors: yes
+  - name: stop remove images
+    command: docker rmi nobleaces9/tomcat-0:v1
+    ignore_errors: yes
+  - name: deploy container
+    command: docker run -dt --name tomcat -p:8090:8080 nobleaces9/tomcat-0:v1
+

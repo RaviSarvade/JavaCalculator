@@ -1,0 +1,10 @@
+---
+
+- hosts: n1
+  #become: yes
+  tasks:
+  - name: build a image
+    command: docker build -t nobleaces9/tomcat-0:v1 .
+  - name: upload a image
+    command: docker push nobleaces9/tomcat-0:v1
+...
