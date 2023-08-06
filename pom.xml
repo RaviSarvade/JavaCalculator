@@ -14,7 +14,7 @@
       <dependency>
          <groupId>junit</groupId>
          <artifactId>junit</artifactId>
-         <version>4.8.2</version>
+         <version>4.13.2</version>
          <scope>test</scope>
       </dependency>
    </dependencies>
@@ -24,7 +24,7 @@
             <!-- Building an executable jar -->
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jar-plugin</artifactId>
-            <version>3.1.0</version>
+            <version>3.2.0</version>
             <configuration>
                <archive>
                   <manifest>
